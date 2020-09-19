@@ -134,11 +134,7 @@ main.js中写个钩子函数 因为main.js相当于是入口文件都会从这�
 
 
 
-## v-if与v-show的区别
-
-v-if是每次删除添加和删除dom 而v-show是利用了display属性 所以频繁使用的时候推荐v-show 不频繁的时候使用v-if
-
-## v-for里面为什么使用key
+## 
 
 为了减少渲染 为了区分sameNode
 
