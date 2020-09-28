@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <input type="text" id="ipt">
+    <script type="text/javascript">
+         function fd(fn,delay){
+            let timer = null
+
+            return function(){
+                if (timer !== null) {
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(fn,delay)
+            }
+         }
+         function fn(){
+            console.log(ipt.value)
+         }
+
+         function sayHi(e) {
+            console.log(e.target.innerWidth, e.target.innerHeight);
+         }
+         function throttle (fn, interval = 500) {
+          let timer = null;
+          return function () {
+            if (timer) {
+              // 定时器正在执行中，跳过
+              return;
+            }
+            timer = setTimeout(() => {
+              clearTimeout(timer);
+              // 清楚以后这个timer要设为null要不就找不到了
+              timer = null;
+              //console.log(timer)
+
+              // console.log(arguments)
+              fn.apply(this, [].slice.call(arguments,0))
+            }, interval);
+          }
+}
+
+         let ipt = document.getElementById('ipt')
+         // ipt.addEventListener('input', fd(fn,1000))
+         window.addEventListener('resize', throttle(sayHi,500))
+    </script>
+</body>
+</html>

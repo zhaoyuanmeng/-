@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+     *{
+         margin: 0;
+         padding: 0;
+     }
+     body{
+         min-width: 600px;
+     }
+    .header,.footer{
+        width: 100%;
+        height: 100px;
+        font-size: 30px;
+        line-height: 100px;
+        text-align: center;
+        background-color: cadetblue;
+
+    }
+    .footer {
+        background-color:blue;
+    }
+    .container{
+        padding: 0 200px;
+        overflow: hidden;
+    }
+    .column{
+        float: left;
+        height: 200px;
+    }
+    .left{
+        width: 200px;
+        background-color: aqua;
+        margin-left: -100%;
+        position: relative;
+        left: -200px;
+        top: 0px;
+    }
+    .right{
+        width: 200px;
+        background-color: bisque;
+        margin-left: -200px;
+        position: relative;
+        right:-200px;
+        top: 0px;
+    }
+    .center{
+        width: 100%;
+        background-color: rgb(45, 21, 110);
+    }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+            header
+    </div>
+    <!-- 中间部分 -->
+    <div class="container">
+        <div class="column center">center</div>
+        <div class="column left">left</div>
+        <div class="column right">right</div>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer">
+            footer
+    </div>
+</body>
+</html>

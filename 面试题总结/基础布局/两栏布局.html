@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+     *{
+         margin: 0;
+         padding: 0;
+     }
+     body{
+         min-width: 600px;
+         font-size: 18px;
+
+     }
+
+
+    .container{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .left{
+        width: 200px;
+        background-color: aqua;
+        /* 高度由内容自动撑开 */
+        height: 200px;
+        float: left;
+        margin-left: -200px;
+        position: relative;
+        left: 200px;
+        color: chocolate;
+
+    }
+    .right{
+        width: 100%;
+        background-color: rgb(165, 131, 90);
+        float: left;
+        height: 200px;
+        color: coral;
+        margin-left: 220px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <!--  -->
+    <div class="container">
+
+        <div class="left">left固定</div>
+        <div class="right">right自适应</div>
+    </div>
+
+</body>
+</html>

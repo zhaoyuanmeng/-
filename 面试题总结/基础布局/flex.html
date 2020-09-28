@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 注意flex布局是在父级上写的 */
+        .container{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            text-align: center;
+            border: 1px solid royalblue;
+
+            /* 把弹性顶沿着弹性容器的主轴线对齐 */
+            /*   align-items:
+                 flex-start :沿着纵轴顶端对齐
+                 flex-end :沿着纵轴底端对齐
+               * center：沿着纵轴垂直居中对齐
+               * baseline：沿着纵轴基线对齐
+               * stretch :纵向拉伸对齐(子元素不要把height写死)
+             */
+             align-items: stretch;
+           
+        }
+        .container .box1{
+            width: 100px;
+            /* height: 50px; */
+            line-height: 50px;
+            background-color: red;
+        
+        }
+        .container .box2{
+            width: 100px;
+            /* height: 50px; */
+            line-height: 50px;
+            background-color: cyan;
+          
+        }
+        .container .box3{
+            width: 100px;
+            /* height: 50px; */
+            line-height: 50px;
+            background-color: darkgray;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>
