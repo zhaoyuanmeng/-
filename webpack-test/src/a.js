@@ -1,4 +1,4 @@
-console.log('我是a模块')
+console.log('我是a模块1112666622')
 // commonJs
 // module.exports = {
 //     name: "aaa"

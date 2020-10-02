@@ -18,12 +18,12 @@
 
         })
 
-        Promise.all([p1,p2,p3]){
+        let p4 = Promise.all([p1,p2,p3])
             // 全部加载完以后再触发这里
-        }
-        Promise.race([p1,p2,p3]){
+        p4.then(doneCallbacks, failCallbacks)
+        let p5 =  Promise.race([p1,p2,p3])
             // 谁先到就触发这里面
-        }
+        p5.then(doneCallbacks, failCallbacks)
     </script>
 </body>
 </html>
