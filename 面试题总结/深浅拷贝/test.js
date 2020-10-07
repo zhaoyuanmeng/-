@@ -2,7 +2,7 @@
 * @Author: ZhaoYuanDa
 * @Date:   2020-10-02 17:04:31
 * @Last Modified by:   ZhaoYuanDa
-* @Last Modified time: 2020-10-02 18:27:12
+* @Last Modified time: 2020-10-07 17:00:27
 */
 
 function copy_deep(obj){
@@ -57,6 +57,26 @@ console.log(obj)
 console.log('-------------')
 console.log(obj2)
 console.log(obj3)
+
+
+
+
+console.log('浅拷贝部分---------')
+let a = {
+  name:"age",
+  city:{
+    name:"沧州"
+  }
+}
+let b = Object.assign({},a)
+// 只有a这个对象会改变
+a.name="ssss"
+
+// a,b都会改变
+b.city.name="asd"
+
+console.log(a)
+console.log(b)
 
 
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+    const obj = {
+        methodA(){
+            console.log('coffee')
+        }
+    }
+    // Object.create是以obj为原型创建一个新的对象
+    // Object.create 可以在原型下添加属性啥的,相当于create出来的 是儿(newObj) 父是(obj)
+    let newObj = Object.create(obj)
+    console.log(obj)
+    console.log(newObj)
+    // 通过原型链的方式查找的 找上一级找到的
+    newObj.methodA()
+
+</script>
+</body>
+</html>
