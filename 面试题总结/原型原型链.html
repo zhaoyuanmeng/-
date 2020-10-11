@@ -21,6 +21,41 @@
     // 通过原型链的方式查找的 找上一级找到的
     newObj.methodA()
 
+    function Person(){
+        this.name = 'sd'
+    }
+    Person.prototype.age = 100
+    let a = new Person()
+    console.log(a)
+    console.log(Person.prototype)
+
+    class Son{
+        constructor(age){
+            this.age = age
+        }
+        sayhello(){
+            console.log('hello')
+        }
+    }
+    class Son1 extends Son{
+
+    }
+    let son = new Son(10)
+    console.log(son)
+    console.log(Son)
+    console.log(Son.prototype) //与function的方式一样 就是方法自动写到了类.prototype中,属性还是在自己的实例上
+    console.log(Son.prototype === son.__proto__) //true
+
+    console.log('////////')
+    let son1 = new Son1(20)
+    console.log(son1)
+    console.log(son1.__proto__)
+    console.log(Son1.prototype )
+    console.log(son1.__proto__ ===Son1.prototype ) //true
+    console.log(Son1.__proto__) //类名.__proto__ 在继承的时候就是那个基类
+    console.log(Son1.__proto__ == Son) //true  注意是类名
+    console.log(Son1.prototype.__proto__ === Son.prototype) //true
+
 </script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class="container">
+        <p>vdom</p>
+        <ul style="font-size: 20px;">
+            <li>a</li>
+        </ul>
+    </div>
+
+    <script>
+        // 把上面的写成一个vdom形式
+        const vdom = {
+            tag:'div',
+            props:{
+                className:'container',
+                id:'div1'
+            },
+            children:[
+                {
+                    tag:'p',
+                    txt:'vdom'
+                },
+                {
+                    tag:'ul',
+                    props:{
+                        style:'font-size:20px'
+                    },
+                    children:[
+                        {
+                            tag:'li',
+                            txt:'a'
+                        }
+                    ]
+                }
+            ]
+
+        }
+    </script>
+</body>
+</html>
